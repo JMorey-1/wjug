@@ -194,20 +194,6 @@ body {
     color: #000;
 }
 
-.home-page .jug-section .text-decoration-none {
-    background-color: #000;
-    color: #fff; 
-    padding: 0.1rem 0.4rem;
-    border-radius: 3px;
-    transition: all 0.3s ease;
-}
-
-.home-page .jug-section .text-decoration-none:hover {
-    background-color: #fff;
-    color: #000;
-    outline: 1px solid #000;
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .home-page .d-flex.gap-3 {
