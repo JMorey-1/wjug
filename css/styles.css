@@ -1,0 +1,832 @@
+
+/* General Page Styling */
+body {
+    background-color: #F5F5F5; 
+    color: #fff; /* Set text color to white for readability */
+    font-family: 'DM Mono', monospace; /* Change link font to DM Mono */
+    margin: 0;
+    padding-top: 100px; /* Adjust this value based on your navbar height */
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #F5F5F5 !important; /* Black navbar */
+    padding: 1rem 1.5rem; /* Increase padding for height */
+    border-bottom: 1px solid #000; /* Optional: subtle border for separation */
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000 !important;
+    font-family: 'DM Mono', monospace;
+    position: relative;
+    transition: color 0.3s ease, opacity 0.3s ease;
+    text-decoration: none;
+ }
+ 
+ .navbar-brand::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: width 0.3s ease;
+ }
+ 
+ .navbar-brand:hover::after,
+ .navbar-brand.active::after {
+     width: 100%;
+ }
+
+.navbar-nav {
+    gap: 3rem; /* Increase spacing between links */
+}
+
+/* Link Styles */
+.nav-link {
+    color: #000 !important;
+    text-decoration: none;
+    position: relative; /* Enable pseudo-element positioning */
+    transition: color 0.3s ease, opacity 0.3s ease;
+    font-family: 'DM Mono', monospace; /* Change link font to DM Mono */
+    font-size: 1.1rem; /* Optional: Increase font size slightly */
+}
+
+/* Underline Effect */
+.nav-link::after {
+    content: ""; /* Pseudo-element for hover effect */
+    position: absolute;
+    bottom: -5px; /* Place just below the text */
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000; /* Highlight color */
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%; /* Expand underline on hover */
+}
+
+/* Hover Effect */
+.nav-link:hover {
+    color: #000 !important; /* Keep hovered link white */
+}
+
+.nav-link.active {
+    color: #000 !important; /* Black text for active link */
+}
+
+.nav-link.active::after {
+    content: ""; /* Use pseudo-element for underline effect */
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%; /* Keep the underline visible */
+    height: 2px;
+    background-color: #000; /* Black underline */
+}
+
+/* Non-hovered Links Transition */
+.nav-link:hover ~ .nav-link,
+.navbar-nav:hover .nav-link:not(:hover) {
+    color: #777 !important; /* Change other links to darker gray */
+}
+
+
+
+
+
+
+/* HOME */
+
+/* Home Page Cards Styling */
+.home-cards .card {
+    margin-top: 80px; /* Add spacing above each card */
+    margin-bottom: 180px; /* Add spacing below each card */
+    background-color: #F5F5F5; /* Light gray background */
+    border: 1px solid #000; /* Black outline */
+    border-radius: 4px; /* Optional: slight rounding of corners */
+    box-shadow: none; /* No shadow */
+    padding: 10px; /* Default padding around content */
+    display: flex; /* Enable flexible alignment */
+    flex-direction: column; /* Align content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    box-sizing: border-box; /* Include padding in height calculation */
+}
+
+/* Home Page Card Body Styling */
+.home-cards .card-body {
+    text-align: center; /* Center-align text */
+    color: #000; /* Black text */
+}
+
+/* Responsive Adjustments for Home Cards */
+@media (max-width: 768px) {
+    .home-cards .card {
+        height: auto; /* Allow height to adjust automatically */
+        padding: 1.5rem; /* Increase padding on smaller screens */
+    }
+}
+
+/* Home Page Specific Styles */
+.home-page {
+    color: #000;
+    font-family: 'DM Mono', monospace;
+}
+
+.home-page h1,
+.home-page h2,
+.home-page h3,
+.home-page .h4,
+.home-page .h5,
+.home-page .display-4 {
+    color: #000;
+    font-family: 'DM Mono', monospace;
+}
+
+.home-page p {
+    color: #000;
+    font-family: 'DM Mono', monospace;
+}
+
+.home-page .lead {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.home-page .card {
+    background-color: #F5F5F5;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: none;
+    transition: transform 0.3s ease;
+}
+
+.home-page .card:hover {
+    transform: translateY(-5px);
+}
+
+.home-page .bi {
+    color: #000;
+}
+
+.home-page .badge {
+    font-family: 'DM Mono', monospace;
+    font-weight: normal;
+}
+
+/* Button Styling */
+.home-page .btn-dark {
+    background-color: #000;
+    border-color: #000;
+    font-family: 'DM Mono', monospace;
+    padding: 0.75rem 2rem;
+    transition: all 0.3s ease;
+}
+
+.home-page .btn-dark:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .home-page .d-flex.gap-3 {
+        flex-direction: column;
+    }
+    
+    .home-page .btn-dark {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+
+
+/* About Page Specific Styles */
+.about-page {
+    color: #000;
+    font-family: 'DM Mono', monospace;
+}
+
+.about-page h1,
+.about-page h2,
+.about-page h3,
+.about-page .h4,
+.about-page .h5 {
+    color: #000;
+    font-family: 'DM Mono', monospace;
+}
+
+.about-page p,
+.about-page li {
+    color: #000;
+    font-family: 'DM Mono', monospace;
+}
+
+.about-page .card {
+    background-color: #F5F5F5;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: none;
+    transition: transform 0.3s ease;
+}
+
+.about-page .card:hover {
+    transform: translateY(-5px);
+}
+
+.about-page .card-body {
+    color: #000;
+}
+
+.about-page .accordion-item {
+    border: 1px solid #000;
+    background-color: #F5F5F5;
+}
+
+.about-page .accordion-button {
+    background-color: #F5F5F5;
+    color: #000;
+    font-family: 'DM Mono', monospace;
+}
+
+.about-page .accordion-button:not(.collapsed) {
+    background-color: #000;
+    color: #fff;
+}
+
+.about-page .accordion-button::after {
+    background-image: url('../images/icons/accordion-down.svg');
+}
+
+/* Fix accordion arrow color when expanded */
+.about-page .accordion-button:not(.collapsed)::after {
+    background-image: url('../images/icons/accordion-down-white.svg');
+}
+
+/* Remove blue focus outline */
+.about-page .accordion-button:focus {
+    box-shadow: none;
+    border-color: #000;
+}
+
+.about-page .accordion-body {
+    color: #000;
+    font-family: 'DM Mono', monospace;
+}
+
+.about-page .bi {
+    color: #000;
+}
+
+.about-page .text-primary {
+    color: #000 !important;
+}
+
+/* Remove bullet points from emoji list */
+.about-page .list-unstyled li {
+    list-style-type: none;
+}
+
+/* icon colour */
+.about-page .bi-star-fill,
+.about-page .bi-bullseye,
+.about-page .bi-people-fill,
+.about-page .bi-lightbulb-fill,
+.about-page .bi-briefcase-fill,
+.about-page .bi-chat-dots-fill {
+    color: #000 !important;
+}
+
+/* Also ensure any text-primary classes are black */
+.about-page .text-primary,
+.about-page .text-primary i,
+.about-page i.text-primary {
+    color: #000 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-page .card {
+        margin-bottom: 1rem;
+    }
+}
+
+
+/* Events Page Specific Styles */
+.events-page {
+    color: #000;
+    font-family: 'DM Mono', monospace;
+}
+
+.events-page h1,
+.events-page h2,
+.events-page h3,
+.events-page .h4,
+.events-page .h5 {
+    color: #000;
+    font-family: 'DM Mono', monospace;
+}
+
+.events-page p,
+.events-page li {
+    color: #000;
+    font-family: 'DM Mono', monospace;
+}
+
+.events-page .card {
+    background-color: #F5F5F5;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: none;
+    transition: transform 0.3s ease;
+}
+
+.events-page .card:hover {
+    transform: translateY(-5px);
+}
+
+.events-page .bi {
+    color: #000;
+}
+
+.events-page .badge {
+    font-family: 'DM Mono', monospace;
+    font-weight: normal;
+}
+
+.events-page .btn-dark {
+    background-color: #000;
+    border-color: #000;
+    font-family: 'DM Mono', monospace;
+    transition: all 0.3s ease;
+}
+
+.events-page .btn-dark:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.events-page a.text-decoration-none {
+    color: #000;
+}
+
+.events-page a.text-decoration-none:hover {
+    text-decoration: underline !important;
+}
+
+/* Carousel control styling */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    opacity: 1;
+}
+
+#upcomingEventsCarousel .carousel-inner{
+    min-height: 480px;
+}
+
+#pastEventsCarousel .carousel-inner {
+    min-height: 300px; /* Adjust this value to match your tallest slide */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+    position: absolute;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    display: none; /* Hide the default icons */
+}
+
+.carousel-control-prev::after,
+.carousel-control-next::after {
+    content: "→";
+    font-family: 'DM Mono', monospace;
+    font-size: 48px;
+    color: #000;
+}
+
+.carousel-control-prev::after {
+    content: "←";
+}
+
+/* Media query for mobile */
+@media (max-width: 768px) {
+    .carousel-control-prev {
+        left: -10px;
+    }
+    
+    .carousel-control-next {
+        right: -10px;
+    }
+}
+
+/* Desktop positioning */
+@media (min-width: 769px) {
+    .carousel-control-prev {
+        left: -50px;
+    }
+    
+    .carousel-control-next {
+        right: -50px;
+    }
+}
+
+/* Ensure cards maintain height */
+.carousel-item .card {
+    height: 100%;
+    margin-bottom: 1rem;
+}
+
+/* Add padding for the controls */
+.carousel {
+    padding: 0 2rem;
+}
+
+/* Handle spacing between slides */
+.carousel-item {
+    padding: 0.5rem 0;
+}
+
+
+
+#upcomingEventsCarousel,
+#pastEventsCarousel {
+    margin-bottom: 100px;
+}
+
+
+
+
+
+.join-page {
+    color: #000;
+    font-family: 'DM Mono', monospace;
+ }
+ 
+ .join-page h1,
+ .join-page h2,
+ .join-page h3,
+ .join-page .h4,
+ .join-page .h5 {
+    color: #000;
+    font-family: 'DM Mono', monospace;
+ }
+ 
+ .join-page p {
+    color: #000;
+    font-family: 'DM Mono', monospace;
+ }
+ 
+ .join-page .card {
+    background-color: #F5F5F5;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: none;
+    transition: transform 0.3s ease;
+ }
+ 
+ .join-page .card:hover {
+    transform: translateY(-5px);
+ }
+ 
+ /* Form Controls */
+ .join-page .form-label {
+    color: #000;
+    font-family: 'DM Mono', monospace;
+ }
+ 
+ .join-page .form-control,
+ .join-page .form-select {
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 0.75rem;
+    font-family: 'DM Mono', monospace;
+ }
+ 
+ .join-page .form-control:focus,
+ .join-page .form-select:focus {
+    box-shadow: none;
+    border-color: #000;
+ }
+ 
+ /* Checkboxes */
+ .join-page .form-check-label {
+    color: #000;
+    font-family: 'DM Mono', monospace;
+ }
+ 
+ .join-page .form-check-input {
+    border-color: #000;
+ }
+ 
+ .join-page .form-check-input:checked {
+    background-color: #000;
+    border-color: #000;
+ }
+ 
+ /* Buttons */
+ .join-page .btn-dark {
+    background-color: #000;
+    border-color: #000;
+    font-family: 'DM Mono', monospace;
+    padding: 0.75rem;
+    transition: all 0.3s ease;
+ }
+ 
+ .join-page .btn-dark:hover {
+    background-color: #fff;
+    color: #000;
+ }
+ 
+ /* Links */
+ .join-page a {
+    color: #000;
+ }
+ 
+ .join-page a:hover {
+    color: #000;
+ }
+ 
+ /* Alert Messages */
+ .join-page .alert {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    background-color: #f8d7da;
+    border: 1px solid #f5c2c7;
+    border-radius: 4px;
+ }
+ 
+ .join-page .alert-success {
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+ }
+ 
+ .join-page .alert-link {
+    color: inherit;
+    text-decoration: underline;
+ }
+ 
+ 
+ /* Responsive adjustments */
+ @media (max-width: 768px) {
+    .join-page .card {
+        margin-bottom: 1rem;
+    }
+ }
+
+
+
+/* Resources Page Specific Styles */
+.resources-page {
+    color: #000;
+    font-family: 'DM Mono', monospace;
+}
+
+.resources-page h1,
+.resources-page h2,
+.resources-page h3,
+.resources-page .h4,
+.resources-page .h5 {
+    color: #000;
+    font-family: 'DM Mono', monospace;
+}
+
+.resources-page p,
+.resources-page li {
+    color: #000;
+    font-family: 'DM Mono', monospace;
+}
+
+.resources-page .card {
+    background-color: #F5F5F5;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: none;
+    transition: transform 0.3s ease;
+}
+
+.resources-page .card:hover {
+    transform: translateY(-5px);
+}
+
+.resources-page .bi {
+    color: #000;
+}
+
+.resources-page pre {
+    border-radius: 4px;
+    border-color: #000 !important;
+    background-color: #fff !important;
+}
+
+.resources-page pre code {
+    font-family: 'DM Mono', monospace;
+    color: #000;
+}
+
+.resources-page .text-decoration-none {
+    background-color: #000;
+    color: #fff; 
+    padding: 0.2rem 0.6rem; /* Reduced padding */
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-size: 0.8rem; /* Smaller font size */
+ }
+ 
+ .resources-page .text-decoration-none:hover {
+    background-color: #fff;
+    color: #000;
+    outline: 1px solid #000;
+ }
+
+.resources-page .btn-dark {
+    background-color: #000;
+    border-color: #000;
+    font-family: 'DM Mono', monospace;
+    transition: all 0.3s ease;
+}
+
+.resources-page .btn-dark:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Strong tags in lists */
+.resources-page strong {
+    font-weight: 500;
+}
+
+
+
+
+
+/* Login Page Specific Styles */
+.login-page {
+    color: #000;
+    font-family: 'DM Mono', monospace;
+ }
+ 
+ .login-page h1,
+ .login-page h2,
+ .login-page .h4,
+ .login-page .h5 {
+    color: #000;
+    font-family: 'DM Mono', monospace;
+ }
+ 
+ .login-page p {
+    color: #000;
+    font-family: 'DM Mono', monospace;
+ }
+ 
+ .login-page .card {
+    background-color: #F5F5F5;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: none;
+    transition: transform 0.3s ease;
+ }
+
+
+.login-page .card:hover {
+    transform: translateY(-5px);
+}
+ 
+ .login-page .form-label {
+    color: #000;
+    font-family: 'DM Mono', monospace;
+ }
+ 
+ .login-page .form-control {
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 0.75rem;
+    font-family: 'DM Mono', monospace;
+ }
+ 
+ .login-page .form-control:focus {
+    box-shadow: none;
+    border-color: #000;
+ }
+ 
+ .login-page .btn {
+    font-family: 'DM Mono', monospace;
+    padding: 0.75rem;
+ }
+ 
+ .login-page .alert {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    background-color: #f8d7da;
+    border: 1px solid #f5c2c7;
+    border-radius: 4px;
+ }
+
+ .login-page .btn {
+    font-family: 'DM Mono', monospace;
+    padding: 0.5rem 1rem;
+}
+ 
+ .login-page .btn-dark {
+    background-color: #000;
+    border-color: #000;
+    transition: all 0.3s ease;
+ }
+ 
+ .login-page .btn-dark:hover {
+    background-color: #fff;
+    color: #000;
+ }
+ 
+ .login-page .btn-outline-dark {
+    border-color: #000;
+    color: #000;
+    transition: all 0.3s ease;
+ }
+ 
+ .login-page .btn-outline-dark:hover {
+    background-color: #000;
+    color: #fff;
+ }
+ 
+ .login-page a {
+    color: #000;
+ }
+ 
+ .login-page .alert-link {
+    color: inherit;
+    text-decoration: underline;
+ }
+ 
+
+
+
+
+/* Footer Styling */
+.footer {
+    background-color: #000 !important;
+    color: #fff;
+    padding: 2rem 0;
+    font-family:'DM Mono', monospace !important;
+}
+
+.footer h5 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer ul {
+    padding: 0;
+    list-style: none;
+}
+
+.footer ul.list-inline {
+    margin: 0;
+    padding: 0;
+}
+
+.footer ul.list-inline li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+.divider-line {
+    height: 1px;              /* Thickness of the line */
+    background-color: #fff;   /* White color for the line */
+    position: absolute;       /* Positioning it relative to the viewport */
+    left: 0;                  /* Align with the left edge */
+    right: 0;                 /* Align with the right edge */
+    width: 100%;              /* Full width */
+    margin: 0;                /* Remove any margins */
+    z-index: 1;               /* Bring it to the top */
+}
