@@ -22,7 +22,8 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!-- Css -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-light.css">
+    <link rel="stylesheet" href="css/styles-dark.css">
 
     <!-- Form Validation Script -->
     <script src="js/form-validation.js"></script>
@@ -38,7 +39,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">WJUG</a>
+          <a class="navbar-brand active" href="index.html">WJUG</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -48,11 +49,14 @@
                 <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
                 <li class="nav-item"><a class="nav-link" href="events.html">EVENTS</a></li>
                 <li class="nav-item"><a class="nav-link" href="resources.html">RESOURCES</a></li>
-                <li class="nav-item"><a class="nav-link active" href="join.html">JOIN</a></li>
+                <li class="nav-item"><a class="nav-link" href="join.html">JOIN</a></li>
                 <li class="nav-item"><a class="nav-link" href="login.html">LOGIN</a></li>
-                <button id="themeToggle" class="icon-toggle">
-                <i id="themeIcon" class="bi bi-moon"></i>
-                </button>
+                <li class="nav-item">
+                <li class="nav-item">
+                    <button id="themeToggle" class="icon-toggle">
+                        <i id="themeIcon" class="bi bi-moon"></i>
+                    </button>
+                    </li>
             </ul>
           </div>
         </div>
@@ -106,43 +110,64 @@
             </div>
         </div>
     
-        <!-- Membership Form -->
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-body">
-                        <h2 class="h4 mb-4">Membership Form</h2>
+                        <h2 class="h4 mb-4">MEMBERSHIP FORM</h2>
                         <form id="joinForm" onsubmit="return validateJoinForm(event)" novalidate>
                             <!-- Name Fields -->
                             <div class="row mb-4">
                                 <div class="col-md-6">
-                                    <label for="firstName" class="form-label">First Name</label>
+                                    <label for="firstName" class="form-label">FIRST NAME</label>
                                     <input type="text" class="form-control" id="firstName">
                                     <div id="firstNameError" class="alert alert-danger mt-2 d-none">
                                         Please enter your first name.
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <label for="lastName" class="form-label">LAST NAME</label>
                                     <input type="text" class="form-control" id="lastName">
                                     <div id="lastNameError" class="alert alert-danger mt-2 d-none">
                                         Please enter your last name.
                                     </div>
                                 </div>
                             </div>
-    
+        
+        
                             <!-- Email -->
                             <div class="mb-4">
-                                <label for="email" class="form-label">Email</label>
+                                <label for="email" class="form-label">EMAIL</label>
                                 <input type="email" class="form-control" id="email">
                                 <div id="emailError" class="alert alert-danger mt-2 d-none">
                                     Please enter a valid email address.
                                 </div>
                             </div>
-    
+
+                            <!-- Username -->
+                            <div class="mb-4">
+                                <label for="username" class="form-label">USERNAME</label>
+                                <input type="text" class="form-control" id="username">
+                                <div id="usernameError" class="alert alert-danger mt-2 d-none">
+                                    Username must be 3-15 characters and start with a letter.
+                                </div>
+                            </div>
+        
+                            <!-- Password -->
+                            <div class="mb-4">
+                                <label for="password" class="form-label">PASSWORD</label>
+                                <input type="password" class="form-control" id="password">
+                                <div class="progress mt-2 d-none" style="height: 12px;">
+                                    <div id="passwordStrength" class="progress-bar" role="progressbar"></div>
+                                </div>
+                                <div id="passwordError" class="alert alert-danger mt-2 d-none">
+                                    Password must include uppercase, lowercase, number and be at least 8 characters.
+                                </div>
+                            </div>
+        
                             <!-- Experience Level -->
                             <div class="mb-4">
-                                <label for="experience" class="form-label">Java Experience Level</label>
+                                <label for="experience" class="form-label">JAVA EXPERIENCE LEVEL</label>
                                 <select class="form-select" id="experience">
                                     <option value="">Select your experience level</option>
                                     <option value="beginner">Beginner</option>
@@ -153,23 +178,22 @@
                                     Please select your experience level.
                                 </div>
                             </div>
-    
+        
                             <!-- Success Message -->
                             <div id="successMessage" class="alert alert-success mb-4 d-none">
                                 Thanks for applying! We'll be in touch shortly with more information.
                             </div>
-    
+        
                             <!-- Submit Button -->
-                            <div class="d-grid">
-                                <button type="submit" class="btn btn-dark">Submit Application</button>
+                            <div class="text-center mb-4">
+                                <button type="submit" class="btn btn-dark">SUBMIT</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
+      </div>
 
     <!-- Footer -->
     <footer class="footer bg-dark text-white py-4">

@@ -112,7 +112,7 @@ body {
 
 /* Navbar Toggler Icon */
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='black' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    background-image: url('../images/icons/navbar-toggler-icon-light-theme.svg');
 }
 
 .icon-toggle {
@@ -337,22 +337,11 @@ body {
 /* EVENTS PAGE */
 
 
-.events-page {
-    color: #000;
-    font-family: 'DM Mono', monospace;
-}
-
 .events-page h1,
 .events-page h2,
 .events-page h3,
 .events-page .h4,
 .events-page .h5 {
-    color: #000;
-    font-family: 'DM Mono', monospace;
-}
-
-.events-page p,
-.events-page li {
     color: #000;
     font-family: 'DM Mono', monospace;
 }
@@ -493,11 +482,6 @@ body {
 /* JOIN PAGE */
 
 
-.join-page {
-    color: #000;
-    font-family: 'DM Mono', monospace;
- }
- 
  .join-page h1,
  .join-page h2,
  .join-page h3,
@@ -560,6 +544,36 @@ body {
     background-color: #000;
     border-color: #000;
  }
+
+ .progress {
+    background-color: #f5f5f5;
+    border: 1px solid #000;
+    border-radius: 0;
+}
+
+.progress-bar {
+    transition: width 0.3s ease;
+}
+
+.progress-bar.bg-danger {
+    background-color: #f8d7da !important;
+    border-color: #f5c2c7 !important;
+}
+
+.progress-bar.bg-warning {
+    background-color: #fff3cd !important;
+    border-color: #ffecb5 !important;
+}
+
+.progress-bar.bg-success {
+    background-color: #d1e7dd !important;
+    border-color: #badbcc !important;
+}
+
+#passwordFeedback {
+    color: #000;
+    font-family: 'DM Mono', monospace;
+}
  
  /* Buttons */
  .join-page .btn-dark {
@@ -620,11 +634,6 @@ body {
 
 /* RESOURCES PAGE */
 
-
-.resources-page {
-    color: #000;
-    font-family: 'DM Mono', monospace;
-}
 
 .resources-page h1,
 .resources-page h2,
@@ -707,11 +716,6 @@ body {
 /* LOGIN PAGE */
 
 
-
-.login-page {
-    color: #000;
-    font-family: 'DM Mono', monospace;
- }
  
  .login-page h1,
  .login-page h2,
@@ -866,390 +870,3 @@ body {
 
 
 
-/* DARK MODE */
-
-
-/* General Dark Mode Styling */
-body.dark-mode {
-    background-color: #121212; /* Dark background */
-    color: #F5F5F5; /* Light theme background color for text */
-}
-
-/* Dark Mode Styling */
-body.dark-mode .icon-toggle {
-    color: #fff; /* Light icon for dark mode */
-}
-
-body.dark-mode .icon-toggle:hover {
-    color: #F4D03F ; /* Yellow interior for icon in dark mode */
-}
-
-/* General Text */
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode h4,
-body.dark-mode h5,
-body.dark-mode h6,
-body.dark-mode p,
-body.dark-mode ul li {
-    color: #F5F5F5 !important; /* Ensure all text is light */
-}
-
-/* Dark Mode */
-body.dark-mode .text-muted {
-    color: #b0b3b8 !important; /* Light gray for dark backgrounds */
-}
-
-/* Navbar */
-body.dark-mode .navbar {
-    background-color: #1e1e1e !important; /* Dark background for navbar */
-    border-bottom: 1px solid #F5F5F5; /* Light theme border color */
-}
-
-body.dark-mode .navbar-brand {
-    color: #F5F5F5 !important; /* Light theme color for text */
-}
-
-body.dark-mode .nav-link {
-    color: #F5F5F5 !important;
-}
-
-body.dark-mode .nav-link:hover {
-    color: #cccccc !important;
-}
-
-/* Navbar Brand in Dark Mode */
-body.dark-mode .navbar-brand {
-    color: #F5F5F5 !important;
-    text-decoration: none;
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-body.dark-mode .navbar-brand::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #F5F5F5;
-    transition: width 0.3s ease;
-}
-
-body.dark-mode .navbar-brand:hover::after {
-    width: 100%;
-}
-
-/* Keep underline for active brand */
-body.dark-mode .navbar-brand.active::after {
-    width: 100%;
-}
-
-/* Navbar Links in Dark Mode */
-body.dark-mode .nav-link {
-    color: #F5F5F5 !important;
-    text-decoration: none;
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-body.dark-mode .nav-link::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #F5F5F5;
-    transition: width 0.3s ease;
-}
-
-body.dark-mode .nav-link:hover::after {
-    width: 100%;
-}
-
-/* Keep underline for active links */
-body.dark-mode .nav-link.active::after {
-    width: 100%;
-}
-
-/* Ensure active links retain white color */
-body.dark-mode .nav-link.active {
-    color: #ffffff !important;
-}
-
-/* Dark Mode: Navbar Toggler Icon */
-body.dark-mode .navbar-dark .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-
-
-
-/* Dark Mode: Navbar Toggler */
-body.dark-mode .navbar-toggler {
-    border-color: white !important; /* White border for dark background */
-}
-
-/* Remove White Focus Outline in Dark Mode */
-body.dark-mode .navbar-toggler:focus {
-    outline: none !important; /* Remove the default focus outline */
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5); /* Optional: Add a subtle white glow */
-}
-
-/* General Card Styles */
-body.dark-mode .card,
-body.dark-mode .home-cards .card {
-    background-color: #1e1e1e !important; /* Dark card background */
-    border: 1px solid #F5F5F5 !important; /* Light theme border */
-    color: #F5F5F5 !important; /* Light theme color for text */
-}
-
-/* Card Body Specificity */
-body.dark-mode .card-body,
-body.dark-mode .home-cards .card-body {
-    color: #F5F5F5 !important;
-}
-
-/* Target All Headings and Text */
-body.dark-mode .card h1,
-body.dark-mode .card h2,
-body.dark-mode .card h3,
-body.dark-mode .card h4,
-body.dark-mode .card h5,
-body.dark-mode .card h6,
-body.dark-mode .card p,
-body.dark-mode .home-cards .card h1,
-body.dark-mode .home-cards .card h2,
-body.dark-mode .home-cards .card h3,
-body.dark-mode .home-cards .card h4,
-body.dark-mode .home-cards .card h5,
-body.dark-mode .home-cards .card h6,
-body.dark-mode .home-cards .card p {
-    color: #F5F5F5 !important; /* Explicitly set text color */
-}
-
-/* Forms */
-body.dark-mode .form-label {
-    color: #F5F5F5; /* Light theme color for labels */
-}
-
-body.dark-mode .form-control,
-body.dark-mode .form-select {
-    background-color: #333;
-    border: 1px solid #F5F5F5; /* Light theme border color */
-    color: #F5F5F5; /* Light theme color for text */
-}
-
-body.dark-mode .form-control::placeholder {
-    color: #aaaaaa; /* Lighter placeholder text */
-}
-
-/* Buttons */
-/* Base Button Style in Dark Mode */
-body.dark-mode .btn {
-    background-color: #F5F5F5 !important; /* Light theme background color */
-    color: #1e1e1e !important; /* Dark theme card text color */
-    border: 1px solid #1e1e1e !important; /* Dark theme card border color */
-    text-decoration: none !important; /* Remove underlines */
-    font-family: 'DM Mono', monospace; /* Match existing font */
-    transition: all 0.3s ease; /* Smooth transition for hover */
-}
-
-/* Hover Effect for Buttons in Dark Mode */
-body.dark-mode .btn:hover {
-    background-color: #1e1e1e !important; /* Dark theme card background */
-    color: #F5F5F5 !important; /* Light theme background color */
-    border: 1px solid #F5F5F5 !important; /* Light border */
-    text-decoration: none !important; /* Ensure no underline on hover */
-}
-
-/* Disabled Buttons in Dark Mode */
-body.dark-mode .btn:disabled {
-    background-color: #6c757d !important; /* Gray background */
-    color: #fff !important; /* Light text */
-    border: 1px solid #6c757d !important; /* Matching gray border */
-    cursor: not-allowed !important; /* Disabled cursor */
-}
-
-/* Outline Buttons in Dark Mode */
-body.dark-mode .btn-outline-dark {
-    background-color: transparent !important; /* Transparent background */
-    color: #F5F5F5 !important; /* Light theme background color for text */
-    border: 1px solid #F5F5F5 !important; /* Light border */
-}
-
-/* Outline Button Hover in Dark Mode */
-body.dark-mode .btn-outline-dark:hover {
-    background-color: #F5F5F5 !important; /* Light theme background */
-    color: #1e1e1e !important; /* Dark theme card text color */
-    border: 1px solid #1e1e1e !important; /* Dark border */
-    text-decoration: none !important; /* Remove underline */
-}
-
-/* Button Active State */
-body.dark-mode .btn:active {
-    background-color: #1e1e1e !important; /* Dark theme card background */
-    color: #F5F5F5 !important; /* Light theme background color for text */
-    border: 1px solid #F5F5F5 !important; /* Light border */
-    transform: scale(0.98); /* Subtle press effect */
-    transition: transform 0.1s ease; /* Smooth transition for press */
-}
-
-
-/* Inline Links */
-body.dark-mode a {
-    color: #F5F5F5 !important; /* Light theme background color for links */
-    text-decoration: underline;
-}
-
-body.dark-mode a:hover {
-    color: #cccccc !important; /* Slightly lighter hover color */
-}
-
-/* Footer */
-body.dark-mode .footer {
-    background-color: #1e1e1e !important; /* Dark footer background */
-    color: #F5F5F5 !important;
-}
-
-body.dark-mode .footer a {
-    color: #F5F5F5 !important; /* Light theme color for links */
-}
-
-body.dark-mode .footer a:hover {
-    color: #cccccc !important;
-}
-
-body.dark-mode .divider-line {
-    background-color: #F5F5F5 !important; /* Light theme color for divider lines */
-}
-
-/* Carousel */
-body.dark-mode .carousel-control-prev::after,
-body.dark-mode .carousel-control-next::after {
-    color: #F5F5F5; /* Light theme color for carousel arrows */
-}
-
-/* About Page */
-body.dark-mode .about-page .card {
-    background-color: #1e1e1e;
-    border-color: #F5F5F5; /* Light theme border color */
-}
-
-body.dark-mode .about-page .accordion-item {
-    background-color: #1e1e1e;
-    border-color: #F5F5F5; /* Light theme border color */
-}
-
-body.dark-mode .about-page .accordion-button {
-    background-color: #333;
-    color: #F5F5F5; /* Light theme color for text */
-}
-
-body.dark-mode .about-page .accordion-button:not(.collapsed) {
-    background-color: #444;
-}
-
-/* Resources Page */
-body.dark-mode .resources-page .card {
-    background-color: #1e1e1e;
-    border: 1px solid #F5F5F5; /* Light theme border color */
-    color: #F5F5F5; /* Light theme color for text */
-}
-
-body.dark-mode .resources-page pre {
-    background-color: #333 !important;
-    color: #F5F5F5;
-}
-
-body.dark-mode .resources-page .text-decoration-none {
-    background-color: #444 !important;
-    color: #F5F5F5 !important;
-}
-
-body.dark-mode .resources-page .text-decoration-none:hover {
-    background-color: #F5F5F5 !important;
-    color: #000000 !important;
-}
-
-/* Card Icons (Mission & Goals Section) */
-body.dark-mode .card i {
-    color: #F5F5F5 !important; /* A soft blue for icons */
-}
-
-/* Accordion Items */
-body.dark-mode .accordion-item {
-    background-color: #1e1e1e !important; /* Dark background */
-    border: 1px solid #F5F5F5 !important; /* Light border */
-}
-
-/* Default Accordion Arrow (Collapsed) */
-body.dark-mode .about-page .accordion-button::after {
-    background-image: url('../images/icons/accordion-down-white.svg') !important; /* Always white arrow */
-    transform: rotate(0deg); /* Arrow points down when collapsed */
-    transition: transform 0.3s ease; /* Smooth rotation */
-}
-
-/* Expanded Accordion Arrow */
-body.dark-mode .about-page .accordion-button:not(.collapsed)::after {
-    transform: rotate(-180deg); /* Arrow points up when expanded */
-    background-image: url('../images/icons/accordion-down-white.svg') !important; /* Still white */
-}
-
-/* Accordion Body */
-body.dark-mode .accordion-body {
-    background-color: #1e1e1e !important;
-    color: #F5F5F5 !important;
-}
-
-/* Join Page */
-body.dark-mode .join-page .card {
-    background-color: #1e1e1e;
-    color: #F5F5F5; /* Light theme color for text */
-}
-
-body.dark-mode .join-page .btn-dark {
-    background-color: #444;
-    color: #F5F5F5;
-}
-
-body.dark-mode .join-page .btn-dark:hover {
-    background-color: #555;
-    color: #F5F5F5;
-}
-
-body.dark-mode .join-page .form-control {
-    background-color: #333;
-    border-color: #F5F5F5; /* Light theme border color */
-    color: #F5F5F5; /* Light theme color for text */
-}
-
-/* Alert Messages in Dark Mode */
-body.dark-mode .join-page .alert {
-    background-color: #f8d7da !important; /* Light red for error */
-    border: 1px solid #f5c2c7 !important; /* Subtle red border */
-    color: #721c24 !important; /* Ensure the text remains readable */
-}
-
-/* Success Messages in Dark Mode */
-body.dark-mode .join-page .alert-success {
-    background-color: #d1e7dd !important; /* Light green for success */
-    border-color: #badbcc !important; /* Subtle green border */
-    color: #155724 !important; /* Dark green text for success */
-}
-
-/* Alert Links in Dark Mode */
-body.dark-mode .alert-link {
-    color: #721c24 !important; /* Dark red color */
-    font-weight: bold !important; /* Bold for emphasis */
-    text-decoration: underline !important; /* Always underlined */
-}
-
-/* Login Page */
-body.dark-mode .login-page .card {
-    background-color: #1e1e1e;
-    border: 1px solid #F5F5F5; /* Light theme border color */
-    color: #F5F5F5; /* Light theme color for text */
-}

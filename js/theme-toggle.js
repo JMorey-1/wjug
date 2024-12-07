@@ -1,12 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const savedTheme = localStorage.getItem("theme") || "light";
-
-    // Apply the saved theme by adding or removing the dark-mode class
-    if (savedTheme === "dark") {
-        document.body.classList.add("dark-mode");
-    } else {
-        document.body.classList.remove("dark-mode");
-    }
+    applyTheme(savedTheme);
 
     // Update the toggle icon (optional)
     updateToggleIcon(savedTheme);
@@ -14,19 +8,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.getElementById("themeToggle").addEventListener("click", function () {
     const isDarkMode = document.body.classList.contains("dark-mode");
+    const newTheme = isDarkMode ? "light" : "dark";
 
-    // Toggle the dark-mode class
-    if (isDarkMode) {
-        document.body.classList.remove("dark-mode");
-        localStorage.setItem("theme", "light");
-    } else {
-        document.body.classList.add("dark-mode");
-        localStorage.setItem("theme", "dark");
-    }
+    // Apply the new theme
+    applyTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
 
     // Update the toggle icon (optional)
-    updateToggleIcon(isDarkMode ? "light" : "dark");
+    updateToggleIcon(newTheme);
 });
+
+function applyTheme(theme) {
+    const darkThemeLink = document.getElementById("darkThemeLink");
+
+    if (theme === "dark") {
+        document.body.classList.add("dark-mode");
+        if (!darkThemeLink) {
+            // Create and append the dark theme link
+            const link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.href = "css/styles-dark.css";
+            link.id = "darkThemeLink";
+            document.head.appendChild(link);
+        }
+    } else {
+        document.body.classList.remove("dark-mode");
+        if (darkThemeLink) {
+            // Remove the dark theme link
+            darkThemeLink.remove();
+        }
+    }
+}
 
 // Optional: Update the theme toggle button or icon
 function updateToggleIcon(theme) {
