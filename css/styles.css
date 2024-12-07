@@ -1,18 +1,26 @@
 
-/* General Page Styling */
+/* GENERAL */
+
+
+
+
 body {
     background-color: #F5F5F5; 
-    color: #fff; /* Set text color to white for readability */
-    font-family: 'DM Mono', monospace; /* Change link font to DM Mono */
+    color: #fff; /* text color */
+    font-family: 'DM Mono', monospace;
     margin: 0;
-    padding-top: 100px; /* Adjust this value based on your navbar height */
+    padding-top: 100px; /* Space for navbar*/
 }
 
-/* Navbar Styling */
+
+
+/* NAVBAR */
+
+
 .navbar {
-    background-color: #F5F5F5 !important; /* Black navbar */
-    padding: 1rem 1.5rem; /* Increase padding for height */
-    border-bottom: 1px solid #000; /* Optional: subtle border for separation */
+    background-color: #F5F5F5 !important;
+    padding: 1rem 1.5rem; /* Padding for height */
+    border-bottom: 1px solid #000;
 }
 
 .navbar-brand {
@@ -42,24 +50,25 @@ body {
  }
 
 .navbar-nav {
-    gap: 3rem; /* Increase spacing between links */
+    gap: 3rem; /* Spacing between links */
 }
 
 /* Link Styles */
+
 .nav-link {
     color: #000 !important;
     text-decoration: none;
-    position: relative; /* Enable pseudo-element positioning */
+    position: relative;
     transition: color 0.3s ease, opacity 0.3s ease;
-    font-family: 'DM Mono', monospace; /* Change link font to DM Mono */
-    font-size: 1.1rem; /* Optional: Increase font size slightly */
+    font-family: 'DM Mono', monospace; /* Link font */
+    font-size: 1.1rem;
 }
 
 /* Underline Effect */
 .nav-link::after {
     content: ""; /* Pseudo-element for hover effect */
     position: absolute;
-    bottom: -5px; /* Place just below the text */
+    bottom: -5px; /* Place below the text */
     left: 0;
     width: 0;
     height: 2px;
@@ -90,10 +99,10 @@ body {
     background-color: #000; /* Black underline */
 }
 
-/* Non-hovered Links Transition */
+/* Non-hovered Links Fade */
 .nav-link:hover ~ .nav-link,
 .navbar-nav:hover .nav-link:not(:hover) {
-    color: #777 !important; /* Change other links to darker gray */
+    color: #777 !important; /* Change other links to the darker gray */
 }
 
 /* Navbar Toggler */
@@ -101,61 +110,51 @@ body {
     border-color: black !important; /* Black border for visibility */
 }
 
-/* Light Mode: Navbar Toggler Icon */
+/* Navbar Toggler Icon */
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='black' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-/* General Button Styling */
 .icon-toggle {
     background: none;
-    border: none; /* No border for a clean look */
-    color: #1e1e1e; /* Dark icon for light mode */
-    font-size: 1.5rem; /* Icon size */
+    border: none;
+    color: #1e1e1e;
+    font-size: 1.5rem;
     cursor: pointer;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 /* Hover Effect */
 .icon-toggle:hover {
-    color: #F4D03F ; /* Yellow color for icon interior on hover */
+    color: #F4D03F ; /* Yellow color for icon hover */
     transform: scale(1.2); /* Slightly enlarge icon on hover */
 }
 
 
-/* Dark Mode Styling */
-body.dark-mode .icon-toggle {
-    color: #fff; /* Light icon for dark mode */
-}
-
-body.dark-mode .icon-toggle:hover {
-    color: #F4D03F ; /* Yellow interior for icon in dark mode */
-}
 
 
-/* HOME */
 
-/* Home Page Cards Styling */
-.home-cards .card {
-    margin-top: 80px; /* Add spacing above each card */
-    margin-bottom: 180px; /* Add spacing below each card */
-    background-color: #F5F5F5; /* Light gray background */
-    border: 1px solid #000; /* Black outline */
-    border-radius: 4px; /* Optional: slight rounding of corners */
-    box-shadow: none; /* No shadow */
-    padding: 10px; /* Default padding around content */
-    display: flex; /* Enable flexible alignment */
-    flex-direction: column; /* Align content vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    box-sizing: border-box; /* Include padding in height calculation */
-}
+/* HOME PAGE */
+
 
 /* Home Page Card Body Styling */
 .home-cards .card-body {
-    text-align: center; /* Center-align text */
-    color: #000; /* Black text */
+    text-align: center;
+    color: #000;
 }
+
+.home-page .card {
+    background-color: #F5F5F5;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: none;
+    transition: transform 0.3s ease;
+}
+
+.home-page .card:hover {
+    transform: translateY(-5px);
+}
+
 
 /* Responsive Adjustments for Home Cards */
 @media (max-width: 768px) {
@@ -165,11 +164,6 @@ body.dark-mode .icon-toggle:hover {
     }
 }
 
-/* Home Page Specific Styles */
-.home-page {
-    color: #000;
-    font-family: 'DM Mono', monospace;
-}
 
 .home-page h1,
 .home-page h2,
@@ -191,17 +185,6 @@ body.dark-mode .icon-toggle:hover {
     font-weight: 400;
 }
 
-.home-page .card {
-    background-color: #F5F5F5;
-    border: 1px solid #000;
-    border-radius: 4px;
-    box-shadow: none;
-    transition: transform 0.3s ease;
-}
-
-.home-page .card:hover {
-    transform: translateY(-5px);
-}
 
 .home-page .bi {
     color: #000;
@@ -240,11 +223,9 @@ body.dark-mode .icon-toggle:hover {
 
 
 
-/* About Page Specific Styles */
-.about-page {
-    color: #000;
-    font-family: 'DM Mono', monospace;
-}
+
+
+/* ABOUT PAGE */
 
 .about-page h1,
 .about-page h2,
@@ -297,7 +278,6 @@ body.dark-mode .icon-toggle:hover {
     background-image: url('../images/icons/accordion-down.svg');
 }
 
-/* Fix accordion arrow color when expanded */
 .about-page .accordion-button:not(.collapsed)::after {
     background-image: url('../images/icons/accordion-down-white.svg');
 }
@@ -321,7 +301,7 @@ body.dark-mode .icon-toggle:hover {
     color: #000 !important;
 }
 
-/* Remove bullet points from emoji list */
+/* Remove bullet points from list */
 .about-page .list-unstyled li {
     list-style-type: none;
 }
@@ -336,7 +316,6 @@ body.dark-mode .icon-toggle:hover {
     color: #000 !important;
 }
 
-/* Also ensure any text-primary classes are black */
 .about-page .text-primary,
 .about-page .text-primary i,
 .about-page i.text-primary {
@@ -351,7 +330,13 @@ body.dark-mode .icon-toggle:hover {
 }
 
 
-/* Events Page Specific Styles */
+
+
+
+
+/* EVENTS PAGE */
+
+
 .events-page {
     color: #000;
     font-family: 'DM Mono', monospace;
@@ -425,7 +410,7 @@ body.dark-mode .icon-toggle:hover {
 }
 
 #pastEventsCarousel .carousel-inner {
-    min-height: 300px; /* Adjust this value to match your tallest slide */
+    min-height: 300px;
 }
 
 .carousel-control-prev,
@@ -477,13 +462,13 @@ body.dark-mode .icon-toggle:hover {
     }
 }
 
-/* Ensure cards maintain height */
+/* Keep cards same height */
 .carousel-item .card {
     height: 100%;
     margin-bottom: 1rem;
 }
 
-/* Add padding for the controls */
+/* Add padding for controls */
 .carousel {
     padding: 0 2rem;
 }
@@ -502,6 +487,10 @@ body.dark-mode .icon-toggle:hover {
 
 
 
+
+
+
+/* JOIN PAGE */
 
 
 .join-page {
@@ -535,6 +524,7 @@ body.dark-mode .icon-toggle:hover {
     transform: translateY(-5px);
  }
  
+
  /* Form Controls */
  .join-page .form-label {
     color: #000;
@@ -625,7 +615,12 @@ body.dark-mode .icon-toggle:hover {
 
 
 
-/* Resources Page Specific Styles */
+
+
+
+/* RESOURCES PAGE */
+
+
 .resources-page {
     color: #000;
     font-family: 'DM Mono', monospace;
@@ -709,7 +704,10 @@ body.dark-mode .icon-toggle:hover {
 
 
 
-/* Login Page Specific Styles */
+/* LOGIN PAGE */
+
+
+
 .login-page {
     color: #000;
     font-family: 'DM Mono', monospace;
@@ -814,7 +812,9 @@ body.dark-mode .icon-toggle:hover {
 
 
 
-/* Footer Styling */
+/* FOOTER */
+
+
 .footer {
     background-color: #000 !important;
     color: #fff;
@@ -853,20 +853,35 @@ body.dark-mode .icon-toggle:hover {
 
 
 .divider-line {
-    height: 1px;              /* Thickness of the line */
-    background-color: #fff;   /* White color for the line */
-    position: absolute;       /* Positioning it relative to the viewport */
-    left: 0;                  /* Align with the left edge */
-    right: 0;                 /* Align with the right edge */
-    width: 100%;              /* Full width */
-    margin: 0;                /* Remove any margins */
-    z-index: 1;               /* Bring it to the top */
+    height: 1px;              
+    background-color: #fff;  
+    position: absolute;       
+    left: 0;                  
+    right: 0;                 
+    width: 100%;              
+    margin: 0;                
+    z-index: 1;               
 }
+
+
+
+
+/* DARK MODE */
+
 
 /* General Dark Mode Styling */
 body.dark-mode {
     background-color: #121212; /* Dark background */
     color: #F5F5F5; /* Light theme background color for text */
+}
+
+/* Dark Mode Styling */
+body.dark-mode .icon-toggle {
+    color: #fff; /* Light icon for dark mode */
+}
+
+body.dark-mode .icon-toggle:hover {
+    color: #F4D03F ; /* Yellow interior for icon in dark mode */
 }
 
 /* General Text */
